@@ -13,5 +13,5 @@ RUN mkdir -p /tmp/incoming
 
 # Set up the exact rclone webdav command listening on port 5000
 # --baseurl "/" strips the proxy suffix so rclone accepts raw traffic at the root level
-ENTRYPOINT ["rclone", "serve", "webdav", "/arc/projects/NewHorizons", "--addr", ":5000", "--baseurl", "/", "--user", "rubin_push", "--pass", "your_secure_password"]
 
+ENTRYPOINT ["/bin/bash", "-c", "/arc/home/jkavelaars/launch_rclone.sh"]

@@ -34,6 +34,11 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
+        # Map GitHub Secrets safely to the Docker Build Arguments
+        build-args: |
+          WEBDAV_USER=${{ secrets.RCLONE_USER }}
+          WEBDAV_PASS=${{ secrets.RCLONE_PASSWORD }}
+
         # Replace <your_canfar_username_or_project> with your CADC space name
         tags: |
           images.canfar.net/uvickbos/rclone-bridge:latest
