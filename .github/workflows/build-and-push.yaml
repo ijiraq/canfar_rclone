@@ -36,6 +36,5 @@ jobs:
         push: true
         # Replace <your_canfar_username_or_project> with your CADC space name
         tags: |
-          images.canfar.net/${{ secrets.CANFAR_USERNAME }}/rclone-bridge:latest
-          images.canfar.net/${{ secrets.CANFAR_USERNAME }}/rclone-bridge:${{ github.sha }}
+          images.canfar.net/uvickbos/rclone-bridge:latest
 
